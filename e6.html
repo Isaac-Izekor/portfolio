@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Épreuve E6 — Isaac Izekor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Isaac<span>.</span>Izekor</a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="e5.html">Epreuve E5</a></li>
+      <li><a href="e6.html" class="active">Epreuve E6</a></li>
+      <li><a href="entreprise.html">Entreprise</a></li>
+      <li><a href="veille.html">Veille Technologique</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="pagehead">
+  <div class="pagehead-grid"></div>
+  <div class="wrap">
+    <div class="eyebrow">// SUPPORT D'ÉVALUATION</div>
+    <h1>Épreuve E6</h1>
+    <p>L'épreuve E6 du BTS SIO SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète, à partir d'un cahier des charges fourni par l'organisation support. Elle valide la maîtrise des services réseaux essentiels : conception de l'architecture, mise en œuvre des services système, et exploitation/supervision.</p>
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="kicker">CAHIER DES CHARGES &amp; RÉALISATIONS</div>
+    <h2>Mes réalisations E6</h2>
+    <div class="placeholder">
+      <strong>À COMPLÉTER</strong>
+      Cette épreuve se construit tout au long de la 2<sup>e</sup> année de SISR, à partir d'un cahier des charges d'entreprise .
+    </div>
+  </div>
+</section>
+
+<a class="backhome" href="index.html">← Retour à l'accueil</a>
+<footer>© 2026 Isaac Izekor — Portfolio BTS SIO SISR</footer>
+
+<script>
+document.getElementById('navtoggle').addEventListener('click', function(){document.getElementById('navlinks').classList.toggle('open');});
+document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click', function(){document.getElementById('navlinks').classList.remove('open');});});
+</script>
+</body>
+</html>

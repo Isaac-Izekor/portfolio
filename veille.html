@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Veille Technologique — Isaac Izekor</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Isaac<span>.</span>Izekor</a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="e5.html">Epreuve E5</a></li>
+      <li><a href="e6.html">Epreuve E6</a></li>
+      <li><a href="entreprise.html">Entreprise</a></li>
+      <li><a href="veille.html" class="active">Veille Technologique</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="pagehead">
+  <div class="pagehead-grid"></div>
+  <div class="wrap">
+    <div class="eyebrow">// AUTO-FORMATION CONTINUE</div>
+    <h1>La Veille Technologique</h1>
+    <p>La veille technologique regroupe les moyens déployés pour collecter et analyser des informations techniques afin de rester à jour face aux évolutions scientifiques et techniques du secteur informatique.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">MA MÉTHODE</div>
+    <h2>Ce que j'utilise pour ma veille</h2>
+    <div class="placeholder">
+      <strong>À COMPLÉTER</strong></div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">THÉMATIQUE 1</div>
+    <h2>À définir</h2>
+    <div class="placeholder">
+      <strong>À COMPLÉTER</strong></div>
+  </div>
+</section>
+
+<section style="border-bottom:none;">
+  <div class="wrap">
+    <div class="kicker">MES OUTILS DE VEILLE</div>
+    <h2>Sources suivies</h2>
+    <div class="card-grid">
+      <div class="card" style="border-style:dashed;">
+        <h3 style="color:var(--ink-dim);">À compléter</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<a class="backhome" href="index.html">← Retour à l'accueil</a>
+<footer>© 2026 Isaac Izekor — Portfolio BTS SIO SISR</footer>
+
+<script>
+document.getElementById('navtoggle').addEventListener('click', function(){document.getElementById('navlinks').classList.toggle('open');});
+document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click', function(){document.getElementById('navlinks').classList.remove('open');});});
+</script>
+</body>
+</html>

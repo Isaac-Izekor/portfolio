@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Isaac Izekor — Portfolio BTS SIO SISR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.hero{position:relative;padding:100px 0 80px;overflow:hidden;border-bottom:1px solid var(--line);}
+.hero-grid{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(to right, var(--line) 1px, transparent 1px),linear-gradient(to bottom, var(--line) 1px, transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 60% at 70% 30%, black 10%, transparent 75%);}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;align-items:center;}
+.hero h1{font-size:42px;}
+.hero h1 em{font-style:normal;color:var(--signal);}
+.hero p{color:var(--ink-dim);font-size:16.5px;max-width:46ch;margin:18px 0 28px;}
+.cta-row{display:flex;gap:14px;flex-wrap:wrap;}
+.node-diagram{width:100%;height:auto;}
+.node-diagram circle.core{fill:var(--signal);}
+.node-diagram circle{fill:var(--navy-800);stroke:var(--wire);stroke-width:1.5;}
+.node-diagram line{stroke:var(--wire);stroke-width:1;opacity:.6;}
+.node-diagram text{font-family:var(--font-mono);font-size:9px;fill:var(--ink-dim);}
+.interests{display:flex;flex-wrap:wrap;gap:10px;}
+.interests span{font-family:var(--font-mono);font-size:12.5px;border:1px solid var(--line);color:var(--ink-dim);padding:6px 12px;border-radius:999px;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Isaac<span>.</span>Izekor</a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html" class="active">Accueil</a></li>
+      <li><a href="e5.html">Epreuve E5</a></li>
+      <li><a href="e6.html">Epreuve E6</a></li>
+      <li><a href="entreprise.html">Entreprise</a></li>
+      <li><a href="veille.html">Veille Technologique</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow">// BTS SIO — Option SISR</div>
+      <h1>Isaac Izekor<br>Étudiant en BTS SIO SISR<br><em>Alternant chez Circle Consulting</em></h1>
+      <p>Technicien Support — systèmes numériques — Cisco Packet Tracer. Après un BUT Réseaux et Télécommunications, je me spécialise dans l'administration et la sécurisation des infrastructures.</p>
+      <div class="cta-row">
+        <a href="#profil" class="btn btn-primary">Mon profil</a>
+        <a href="#contact" class="btn btn-ghost">Me contacter</a>
+      </div>
+    </div>
+    <svg class="node-diagram" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+      <line x1="170" y1="150" x2="70" y2="60"></line>
+      <line x1="170" y1="150" x2="270" y2="60"></line>
+      <line x1="170" y1="150" x2="60" y2="220"></line>
+      <line x1="170" y1="150" x2="270" y2="230"></line>
+      <line x1="170" y1="150" x2="170" y2="270"></line>
+      <line x1="70" y1="60" x2="270" y2="60"></line>
+      <line x1="60" y1="220" x2="170" y2="270"></line>
+      <line x1="270" y1="230" x2="170" y2="270"></line>
+      <circle class="core" cx="170" cy="150" r="13"></circle>
+      <circle cx="70" cy="60" r="8"></circle>
+      <circle cx="270" cy="60" r="8"></circle>
+      <circle cx="60" cy="220" r="8"></circle>
+      <circle cx="270" cy="230" r="8"></circle>
+      <circle cx="170" cy="270" r="8"></circle>
+      <text x="182" y="145">SISR</text>
+      <text x="80" y="48">VLAN 10</text>
+      <text x="240" y="48">VLAN 20</text>
+      <text x="20" y="212">DHCP</text>
+      <text x="278" y="222">SRV</text>
+      <text x="182" y="285">CLIENT</text>
+    </svg>
+  </div>
+</section>
+
+<section id="profil">
+  <div class="wrap">
+    <div class="kicker">MON PROFIL</div>
+    <h2>À propos de moi</h2>
+    <div class="card-grid" style="margin-bottom:40px;">
+      <div>
+        <p style="color:var(--ink-dim);font-size:15.5px;margin-bottom:14px;">19 ans, j'ai commencé mon parcours avec un Bac pro Systèmes Numériques, avant de poursuivre en BUT Réseaux et Télécommunications où j'ai travaillé sur des projets mêlant réseau, développement et gestion de projet. Je suis aujourd'hui en BTS SIO, option SISR, à YNOV Campus, pour me spécialiser dans l'administration et la sécurisation des infrastructures informatiques.</p>
+        <p style="color:var(--ink-dim);font-size:15.5px;">Mon objectif : devenir administrateur systèmes et réseaux, avec une vraie sensibilité pour la cybersécurité.</p>
+        <p style="color:var(--ink-dim);font-size:15.5px;margin-top:14px;"><strong style="color:var(--ink);">Langues</strong> — Français (langue maternelle), Anglais (compétent)<br><strong style="color:var(--ink);">Compétences</strong> — Cisco Packet Tracer, HTML, Excel</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-date">2026 - 2027</div>
+          <div class="tl-title">BTS SIO — Option SISR</div>
+          <div class="tl-desc">YNOV Campus, Nanterre</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2025 - 2026</div>
+          <div class="tl-title">BUT Réseaux et Télécommunications</div>
+          <div class="tl-desc">IUT de Vélizy-Villacoublay</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">2022 - 2025</div>
+          <div class="tl-title">Bac pro Systèmes Numériques</div>
+          <div class="tl-desc">Lycée Claude Chappe, Nanterre</div>
+        </div>
+      </div>
+    </div>
+
+    <h2>Expériences professionnelles</h2>
+    <div style="display:grid;gap:18px;margin-bottom:40px;">
+      <div class="exp-card">
+        <div class="exp-head"><h3>Technicien Junior — Alternance</h3><span>Circle Consulting · Sèvres · 2025 - 2027</span></div>
+        <ul>
+          <li>Gestion de parc &amp; MDM : déploiement, enrôlement et administration à distance des terminaux</li>
+          <li>Maintenance &amp; réparation : diagnostic de pannes et réparation de postes (spécialisation MacBook)</li>
+          <li>Support &amp; SAV : prise en charge des demandes d'assistance et résolution d'incidents utilisateurs</li>
+        </ul>
+      </div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>Assistant Technicien — Été</h3><span>Circle Consulting · Sèvres · 07/2024</span></div>
+        <ul><li>Missions d'assistance technique au sein de l'équipe de Sèvres</li></ul>
+      </div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>Assistant Technicien — Été</h3><span>Olinn Mobile · Montrouge · 08/2023</span></div>
+        <ul><li>Assistance technique auprès des clients de l'enseigne</li></ul>
+      </div>
+      <div class="exp-card">
+        <div class="exp-head"><h3>Stage — Systèmes numériques</h3><span>Engie · Saint-Denis-la-Plaine · 01/2023</span></div>
+        <ul><li>Découverte du métier en environnement systèmes numériques</li></ul>
+      </div>
+    </div>
+
+    <a href="CV_Isaac_Izekor.pdf" target="_blank" rel="noopener" class="btn btn-primary">Télécharger mon CV</a>
+
+    <h2 style="margin-top:48px;">Mes centres d'intérêt</h2>
+    <div class="interests">
+      <span>Réseaux</span><span>Cybersécurité</span><span>Athlétisme</span><span>Jeu video</span><span>Anime</span>
+    </div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="wrap">
+    <div class="kicker">CERTIFICATIONS</div>
+    <h2>Mes certifications</h2>
+    <div class="placeholder">
+      <strong>À COMPLÉTER</strong>
+      
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="border-bottom:none;">
+  <div class="wrap contact-grid">
+    <div>
+      <div class="kicker">CONTACT</div>
+      <h2>Restons en contact</h2>
+      <div class="contact-list">
+        <div class="contact-item"><span class="contact-label">EMAIL</span><span class="contact-value"><a href="mailto:izekorisaacisaac100@gmail.com">izekorisaacisaac100@gmail.com</a></span></div>
+        <div class="contact-item"><span class="contact-label">TÉLÉPHONE</span><span class="contact-value"><a href="tel:+33615029747">06 15 02 97 47</a></span></div>
+      </div>
+    </div>
+    <form onsubmit="event.preventDefault(); window.location.href='mailto:izekorisaacisaac100@gmail.com?subject=Contact depuis le portfolio&body='+encodeURIComponent(document.getElementById('msg').value + ' — ' + document.getElementById('from').value);">
+      <input type="text" placeholder="Votre nom" required>
+      <input type="email" id="from" placeholder="Votre email" required>
+      <textarea id="msg" placeholder="Votre message" required></textarea>
+      <button type="submit">Envoyer le message</button>
+    </form>
+  </div>
+</section>
+
+<footer>© 2026 Isaac Izekor — Portfolio BTS SIO SISR</footer>
+
+<script>
+document.getElementById('navtoggle').addEventListener('click', function(){document.getElementById('navlinks').classList.toggle('open');});
+document.querySelectorAll('.navlinks a').forEach(function(a){a.addEventListener('click', function(){document.getElementById('navlinks').classList.remove('open');});});
+</script>
+</body>
+</html>
