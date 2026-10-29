@@ -8,6 +8,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.lead{color:var(--ink-dim);font-size:15.5px;max-width:72ch;margin-bottom:14px;}
+.lead strong{color:var(--ink);}
+.objlist{list-style:none;display:grid;gap:10px;margin:6px 0 22px;}
+.objlist li{padding-left:22px;position:relative;color:var(--ink-dim);font-size:15px;}
+.objlist li::before{content:'▸';position:absolute;left:0;color:var(--signal);}
+.objlist strong{color:var(--ink);}
+.real-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;}
+.real{display:flex;flex-direction:column;background:var(--navy-900);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .15s,border-color .15s;}
+.real:hover{transform:translateY(-3px);border-color:var(--signal);}
+.real-visual{height:220px;background:var(--navy-800);border-bottom:1px solid var(--line);overflow:hidden;}
+.real-visual svg,.real-visual img{width:100%;height:100%;object-fit:cover;display:block;}
+.real-content{padding:24px 26px 26px;display:flex;flex-direction:column;flex:1;}
+.real-num{font-family:var(--font-mono);font-size:12px;color:var(--signal);letter-spacing:.05em;margin-bottom:8px;}
+.real-content h3{font-size:19px;margin-bottom:12px;line-height:1.3;}
+.real-content p{color:var(--ink-dim);font-size:14.5px;flex:1;}
+.real-content .tag-row{margin:14px 0 18px;}
+.real-links{display:flex;flex-direction:column;gap:8px;}
+.real-links a{font-weight:600;font-size:15px;color:var(--signal);text-decoration:none;}
+.real-links a:hover{text-decoration:underline;}
+.real-links .soon{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);}
+@media (max-width:900px){.real-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 
@@ -30,18 +53,106 @@
   <div class="wrap">
     <div class="eyebrow">// SUPPORT D'ÉVALUATION</div>
     <h1>Épreuve E6</h1>
-    <p>L'épreuve E6 du BTS SIO SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète, à partir d'un cahier des charges fourni par l'organisation support. Elle valide la maîtrise des services réseaux essentiels : conception de l'architecture, mise en œuvre des services système, et exploitation/supervision.</p>
+    <p>L'épreuve E6 (session 2027) du BTS SIO option SISR évalue la capacité à concevoir, déployer et administrer une infrastructure réseau complète. Les situations professionnelles se déroulent chez <strong style="color:var(--ink);">StadiumCompany</strong>, une entreprise d'administration et de gestion d'un grand stade, qui s'appuie sur Networkingcompany pour ses solutions systèmes et réseaux.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">CAHIER DES CHARGES</div>
+    <h2>Objectifs de l'épreuve</h2>
+    <p class="lead">La compétence validée porte sur la maîtrise des services réseau essentiels d'une organisation :</p>
+    <ul class="objlist">
+      <li><strong>Conception :</strong> analyse des besoins et choix d'architecture (plan d'adressage, VLAN, DMZ).</li>
+      <li><strong>Mise en œuvre :</strong> déploiement de Windows Server 2022 (AD, DNS, DHCP) et d'équipements Cisco.</li>
+      <li><strong>Exploitation :</strong> supervision avec Nagios XI, gestion de parc avec GLPI et sécurité (SIEM).</li>
+    </ul>
+    <p class="lead">Les réalisations ci-dessous découlent de ce cahier des charges.</p>
+    <a class="btn btn-primary" href="Cahier_des_Charges_StadiumCompany_E6-IRIS-Paris.pdf" target="_blank" rel="noopener">Télécharger le cahier des charges StadiumCompany</a>
   </div>
 </section>
 
 <section style="border-bottom:none;">
   <div class="wrap">
-    <div class="kicker">CAHIER DES CHARGES &amp; RÉALISATIONS</div>
-    <h2>Mes réalisations E6</h2>
-    <div class="placeholder">
-      <strong>À COMPLÉTER</strong>
-      Cette épreuve se construit tout au long de la 2<sup>e</sup> année de SISR, à partir d'un cahier des charges d'entreprise .
+    <div class="kicker">RÉALISATIONS</div>
+    <h2>Les réalisations en cours de formation</h2>
+
+    <!-- Chaque réalisation = un bloc <article class="real"> … </article>.
+         Pour en ajouter une : copier-coller un bloc complet à la suite et changer le numéro. -->
+    <div class="real-grid">
+
+      <!-- ========== RÉALISATION N°1 ========== -->
+      <article class="real">
+        <div class="real-visual">
+          <!-- VISUEL : garder le dessin SVG ci-dessous, OU le remplacer par :
+               <img src="images/realisation-1.jpg" alt=""> -->
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="220" fill="#151f36"/>
+          <g stroke="#2a3a5c"><path d="M0 55h400M0 110h400M0 165h400M100 0v220M200 0v220M300 0v220"/></g>
+          <ellipse cx="200" cy="118" rx="165" ry="78" fill="#1e2c4a" stroke="#3d6a94" stroke-width="2"/>
+          <ellipse cx="200" cy="118" rx="140" ry="60" fill="none" stroke="#3d6a94" stroke-width="1.2"/>
+          <ellipse cx="200" cy="118" rx="118" ry="46" fill="#0f1729" stroke="#f5a623" stroke-width="1.5"/>
+          <rect x="140" y="92" width="120" height="52" rx="3" fill="none" stroke="#f5a623" stroke-width="1.5"/>
+          <path d="M200 92v52" stroke="#f5a623" stroke-width="1"/><circle cx="200" cy="118" r="10" fill="none" stroke="#f5a623" stroke-width="1"/>
+          <g stroke="#3d6a94" stroke-width="2"><path d="M60 40l-18 30M340 40l18 30M60 196l-18-30M340 196l18-30"/></g>
+          <g fill="#f5a623"><circle cx="42" cy="70" r="3"/><circle cx="358" cy="70" r="3"/><circle cx="42" cy="166" r="3"/><circle cx="358" cy="166" r="3"/></g>
+          <text x="200" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="600" fill="#8b9bb4">STADIUMCOMPANY</text>
+        </svg>
+        </div>
+        <div class="real-content">
+          <div class="real-num">RÉALISATION N°1</div>
+          <!-- TITRE de la réalisation -->
+          <h3>Titre de la réalisation n°1</h3>
+          <!-- CONTEXTE / description (3-4 lignes) -->
+          <p>Contexte de la réalisation : situation de départ, besoin de StadiumCompany et objectif à atteindre.</p>
+          <!-- TAGS : technologies utilisées (ajouter / supprimer des <span class="tag">) -->
+          <div class="tag-row"><span class="tag">Technologie 1</span><span class="tag">Technologie 2</span><span class="tag">Technologie 3</span></div>
+          <!-- LIENS : déposer les PDF dans le dossier docs/ et mettre leur nom exact ci-dessous.
+               Supprimer la ligne « Fiche TP » s'il n'y a pas de TP associé. -->
+          <div class="real-links">
+            <a href="BTS_SIO_E6_Réalisation_1 - Isaac IZEKOR.pdf" target="_blank" rel="noopener">Fiche réalisation →</a>
+            <a href="TP Réalisation 1.pdf" target="_blank" rel="noopener">Fiche TP →</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- ========== RÉALISATION N°2 ========== -->
+      <article class="real">
+        <div class="real-visual">
+          <!-- VISUEL : garder le dessin SVG ci-dessous, OU le remplacer par :
+               <img src="images/realisation-2.jpg" alt=""> -->
+          <svg viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="400" height="220" fill="#151f36"/>
+          <g stroke="#2a3a5c"><path d="M0 55h400M0 110h400M0 165h400M100 0v220M200 0v220M300 0v220"/></g>
+          <ellipse cx="200" cy="118" rx="165" ry="78" fill="#1e2c4a" stroke="#3d6a94" stroke-width="2"/>
+          <ellipse cx="200" cy="118" rx="140" ry="60" fill="none" stroke="#3d6a94" stroke-width="1.2"/>
+          <ellipse cx="200" cy="118" rx="118" ry="46" fill="#0f1729" stroke="#f5a623" stroke-width="1.5"/>
+          <rect x="140" y="92" width="120" height="52" rx="3" fill="none" stroke="#f5a623" stroke-width="1.5"/>
+          <path d="M200 92v52" stroke="#f5a623" stroke-width="1"/><circle cx="200" cy="118" r="10" fill="none" stroke="#f5a623" stroke-width="1"/>
+          <g stroke="#3d6a94" stroke-width="2"><path d="M60 40l-18 30M340 40l18 30M60 196l-18-30M340 196l18-30"/></g>
+          <g fill="#f5a623"><circle cx="42" cy="70" r="3"/><circle cx="358" cy="70" r="3"/><circle cx="42" cy="166" r="3"/><circle cx="358" cy="166" r="3"/></g>
+          <text x="200" y="30" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" font-weight="600" fill="#8b9bb4">STADIUMCOMPANY</text>
+        </svg>
+        </div>
+        <div class="real-content">
+          <div class="real-num">RÉALISATION N°2</div>
+          <!-- TITRE de la réalisation -->
+          <h3>Titre de la réalisation n°2</h3>
+          <!-- CONTEXTE / description (3-4 lignes) -->
+          <p>Contexte de la réalisation : situation de départ, besoin de StadiumCompany et objectif à atteindre.</p>
+          <!-- TAGS : technologies utilisées (ajouter / supprimer des <span class="tag">) -->
+          <div class="tag-row"><span class="tag">Technologie 1</span><span class="tag">Technologie 2</span><span class="tag">Technologie 3</span></div>
+          <!-- LIENS : déposer les PDF dans le dossier docs/ et mettre leur nom exact ci-dessous.
+               Supprimer la ligne « Fiche TP » s'il n'y a pas de TP associé. -->
+          <div class="real-links">
+            <a href="BTS_SIO_E6_Réalisation_2 - Isaac IZEKOR.pdf" target="_blank" rel="noopener">Fiche réalisation →</a>
+            <a href="TP Réalisation 1.pdf" target="_blank" rel="noopener">Fiche TP →</a>
+          </div>
+        </div>
+      </article>
+
     </div>
+
   </div>
 </section>
 

@@ -8,6 +8,40 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+/* intro : deux cartes */
+.intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.intro{background:var(--navy-900);border:1px solid var(--line);border-top:3px solid var(--signal);border-radius:10px;padding:28px 30px;}
+.intro.alt{border-top-color:var(--wire);}
+.intro h3{font-size:19px;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+.intro h3 svg{width:24px;height:24px;flex:none;fill:none;stroke:var(--signal);stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+.intro.alt h3 svg{stroke:var(--wire);}
+.intro p{color:var(--ink-dim);font-size:15px;}
+/* thématiques */
+.theme-desc{color:var(--ink-dim);font-size:15.5px;max-width:72ch;margin:-10px 0 28px;}
+.art-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+.art{display:flex;flex-direction:column;background:var(--navy-900);border:1px solid var(--line);border-radius:10px;overflow:hidden;text-decoration:none;transition:transform .15s,border-color .15s;}
+.art:hover{transform:translateY(-3px);border-color:var(--signal);}
+.art-cover{height:170px;background:var(--navy-800);border-bottom:1px solid var(--line);overflow:hidden;}
+.art-cover img,.art-cover svg{width:100%;height:100%;display:block;}
+.art-cover img{object-fit:cover;}
+.art-body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1;}
+.art-label{font-family:var(--font-mono);font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--signal);margin-bottom:8px;}
+.art h3{font-size:17px;margin-bottom:10px;line-height:1.3;}
+.art p{color:var(--ink-dim);font-size:14px;flex:1;}
+.art-src{margin-top:14px;font-family:var(--font-mono);font-size:12px;color:var(--wire);}
+.art-src strong{color:var(--ink-dim);font-weight:500;}
+/* outils */
+.tools-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.tool{background:var(--navy-900);border:1px solid var(--line);border-radius:10px;padding:24px 22px;text-decoration:none;display:block;transition:border-color .15s;}
+.tool:hover{border-color:var(--signal);}
+.tool .sigle{width:46px;height:46px;border-radius:10px;background:var(--signal);color:var(--navy-950);font-family:var(--font-mono);font-weight:700;font-size:15px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;}
+.tool h3{font-size:16px;margin-bottom:8px;}
+.tool p{color:var(--ink-dim);font-size:13.5px;}
+.tool .site{display:block;margin-top:12px;font-family:var(--font-mono);font-size:12px;color:var(--wire);}
+@media (max-width:1000px){.art-grid{grid-template-columns:repeat(2,1fr);}.tools-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:640px){.intro-grid,.art-grid,.tools-grid{grid-template-columns:1fr;}}
+</style>
 </head>
 <body>
 
@@ -30,36 +64,148 @@
   <div class="wrap">
     <div class="eyebrow">// AUTO-FORMATION CONTINUE</div>
     <h1>La Veille Technologique</h1>
-    <p>La veille technologique regroupe les moyens déployés pour collecter et analyser des informations techniques afin de rester à jour face aux évolutions scientifiques et techniques du secteur informatique.</p>
+    <p>Thématique suivie en 2026-2027 : l'intelligence artificielle et la cybersécurité, l'IA comme nouvelle arme des attaquants et comme nouvel outil des défenseurs.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <div class="kicker">MA MÉTHODE</div>
-    <h2>Ce que j'utilise pour ma veille</h2>
-    <div class="placeholder">
-      <strong>À COMPLÉTER</strong></div>
+    <div class="intro-grid">
+      <div class="intro">
+        <h3><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>Qu'est-ce qu'une veille technologique ?</h3>
+        <p>La veille technologique se définit comme tous les moyens déployés par une entreprise pour collecter et analyser des informations techniques afin de soutenir sa croissance. Cette démarche doit la tenir en alerte face aux changements, qu'ils soient scientifiques ou techniques. Pour un futur administrateur systèmes et réseaux, c'est aussi le moyen de suivre les nouvelles menaces et les nouveaux outils.</p>
+      </div>
+      <div class="intro alt">
+        <h3><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Qu'est-ce que j'utilise pour ma veille technologique ?</h3>
+        <p>Pour ma veille technologique, j'utilise principalement Google Actualités pour suivre les dernières informations, le CERT-FR pour les alertes et rapports de sécurité officiels, DCOD pour sa revue de presse quotidienne sur la cybersécurité et l'IA, et LinkedIn pour suivre les experts du domaine. Cela me prend environ 30 minutes par semaine, et je note les actualités importantes sur cette page.</p>
+      </div>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="kicker">THÉMATIQUE 1</div>
-    <h2>À définir</h2>
-    <div class="placeholder">
-      <strong>À COMPLÉTER</strong></div>
+    <h2>L'IA au service des attaquants</h2>
+    <p class="theme-desc">L'IA générative permet aux cybercriminels de produire des phishings crédibles, des deepfakes, et même d'automatiser des attaques complètes. Je suis les rapports qui documentent ces nouveaux usages.</p>
+    <div class="art-grid">
+
+      <a class="art" href="https://www.fortune.com/2025/11/14/anthropic-disrupted-first-documented-large-scale-ai-cyberattack-claude-agentic" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6M9 13h6M2 9h2M2 15h2M20 9h2M20 15h2M9 2v2M15 2v2M9 20v2M15 20v2"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">Agents IA · Novembre 2025</div>
+          <h3>Première campagne de cyberespionnage orchestrée par une IA</h3>
+          <p>Anthropic révèle qu'un groupe lié à un État a détourné Claude Code pour attaquer une trentaine de cibles. 80 à 90 % du travail (reconnaissance, exploitation, vol d'identifiants) a été réalisé par l'IA.</p>
+          <div class="art-src"><strong>Source :</strong> fortune.com</div>
+        </div>
+      </a>
+
+      <a class="art" href="https://cert.cyber.gouv.fr/uploads/CERTFR-2026-CTI-001.pdf" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z"/><path d="M12 8v5M12 16h.01"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">Malwares IA · Février 2026</div>
+          <h3>L'IA générative face aux attaques informatiques — rapport ANSSI</h3>
+          <p>Synthèse de la menace 2025 : deepfakes et faux profils, malwares comme PromptLock ou PromptFlux qui réécrivent leur code via une API d'IA, et plus de 100 000 comptes ChatGPT compromis par des infostealers.</p>
+          <div class="art-src"><strong>Source :</strong> cert.ssi.gouv.fr</div>
+        </div>
+      </a>
+
+      <a class="art" href="https://dcod.ch/2026/10/21/menaces-ia-14-derives-et-avancees-cles-du-21-octobre-2026-dont-openai/" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#f5a623" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M7 10h4M7 14h7M17 10h.01"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">Banques · Octobre 2026</div>
+          <h3>Des agents IA soupçonnés dans des attaques contre des banques</h3>
+          <p>Le CERT-In (Inde) alerte sur des agents IA ayant accédé à des données sensibles sans être détectés ; en Corée du Sud, des indices suggèrent l'usage de modèles d'IA dans des attaques contre plusieurs grandes banques.</p>
+          <div class="art-src"><strong>Source :</strong> dcod.ch</div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">THÉMATIQUE 2</div>
+    <h2>L'IA au service de la défense et son encadrement</h2>
+    <p class="theme-desc">Face à ces menaces, les éditeurs intègrent l'IA dans leurs outils de protection et les institutions européennes organisent la réponse : plans d'action, évaluation des modèles et réglementation.</p>
+    <div class="art-grid">
+
+      <a class="art" href="https://tech-insider.org/fr/plan-cybersecurite-ia-ue-2026/" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#3d6a94" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">Europe · Juillet 2026</div>
+          <h3>Plan d'action européen « cybersécurité et IA »</h3>
+          <p>La Commission lance une capacité d'évaluation des modèles d'IA avancés, un accès encadré pour les acteurs de la cybersécurité (ENISA) et une plateforme de test sécurisée. Plus de 80 % de l'ingénierie sociale observée début 2025 utilisait du phishing assisté par IA.</p>
+          <div class="art-src"><strong>Source :</strong> tech-insider.org</div>
+        </div>
+      </a>
+
+      <a class="art" href="https://donneespersonnelles.fr/omnibus-numerique-ia" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#3d6a94" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7l7-4 7 4M3 15l2-8 2 8a2 2 0 0 1-4 0zM17 15l2-8 2 8a2 2 0 0 1-4 0z"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">AI Act · Juillet 2026</div>
+          <h3>« Omnibus numérique » : le calendrier de l'AI Act est aménagé</h3>
+          <p>L'application générale de l'AI Act reste fixée au 2 août 2026, mais les obligations des systèmes à haut risque sont reportées au 2 décembre 2027. Les entreprises doivent inventorier et documenter leurs usages de l'IA.</p>
+          <div class="art-src"><strong>Source :</strong> donneespersonnelles.fr</div>
+        </div>
+      </a>
+
+      <a class="art" href="https://dcod.ch/2026/10/21/menaces-ia-14-derives-et-avancees-cles-du-21-octobre-2026-dont-openai/" target="_blank" rel="noopener">
+        <div class="art-cover">
+          <svg viewBox="0 0 400 170" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="400" height="170" fill="#151f36"/><g stroke="#2a3a5c"><path d="M0 42h400M0 85h400M0 128h400M80 0v170M160 0v170M240 0v170M320 0v170"/></g><circle cx="200" cy="85" r="42" fill="#1e2c4a" stroke="#3d6a94" stroke-width="1.5"/><g transform="translate(178,63) scale(1.85)" fill="none" stroke="#3d6a94" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2M9 9l2 2 4-4"/></g></svg>
+        </div>
+        <div class="art-body">
+          <div class="art-label">Android · Octobre 2026</div>
+          <h3>Google déploie des protections IA contre les arnaques sur Android</h3>
+          <p>De nouvelles défenses basées sur l'IA détectent les messages frauduleux et les abus de renvoi d'appel directement sur le téléphone. Un critère à prendre en compte dans la gestion d'une flotte mobile (MDM).</p>
+          <div class="art-src"><strong>Source :</strong> dcod.ch</div>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>
 
 <section style="border-bottom:none;">
   <div class="wrap">
-    <div class="kicker">MES OUTILS DE VEILLE</div>
-    <h2>Sources suivies</h2>
-    <div class="card-grid">
-      <div class="card" style="border-style:dashed;">
-        <h3 style="color:var(--ink-dim);">À compléter</h3>
-      </div>
+    <div class="kicker">SOURCES</div>
+    <h2>Mes outils de veille</h2>
+    <div class="tools-grid">
+      <a class="tool" href="https://news.google.com/" target="_blank" rel="noopener">
+        <div class="sigle">GA</div>
+        <h3>Google Actualités</h3>
+        <p>Suivi des dernières informations grâce à des alertes sur « IA cybersécurité », « deepfake » et « ransomware ».</p>
+        <span class="site">news.google.com</span>
+      </a>
+      <a class="tool" href="https://cert.ssi.gouv.fr/" target="_blank" rel="noopener">
+        <div class="sigle">FR</div>
+        <h3>CERT-FR</h3>
+        <p>Alertes de sécurité et rapports de menace officiels de l'ANSSI. La source de référence en France.</p>
+        <span class="site">cert.ssi.gouv.fr</span>
+      </a>
+      <a class="tool" href="https://dcod.ch/" target="_blank" rel="noopener">
+        <div class="sigle">DC</div>
+        <h3>DCOD</h3>
+        <p>Revue de presse quotidienne en français sur la cybersécurité, avec une rubrique dédiée aux menaces liées à l'IA.</p>
+        <span class="site">dcod.ch</span>
+      </a>
+      <a class="tool" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+        <div class="sigle">in</div>
+        <h3>LinkedIn</h3>
+        <p>Suivi d'experts en cybersécurité et en IA, et des publications des éditeurs (Anthropic, Google, Microsoft).</p>
+        <span class="site">linkedin.com</span>
+      </a>
     </div>
   </div>
 </section>

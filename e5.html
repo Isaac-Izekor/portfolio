@@ -8,6 +8,24 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.doc-list{list-style:none;border:1px solid var(--line);border-radius:10px;background:var(--navy-900);overflow:hidden;}
+.doc-list li{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 22px;border-bottom:1px solid var(--line);}
+.doc-list li:last-child{border-bottom:none;}
+.doc-name{display:flex;align-items:center;gap:14px;font-weight:600;font-size:15.5px;}
+.doc-thumb{width:40px;height:40px;border-radius:8px;flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy-800);border:1px solid var(--line);}
+.doc-thumb img{width:100%;height:100%;object-fit:cover;}
+.doc-thumb img.contain{object-fit:contain;padding:4px;}
+.doc-thumb svg{width:20px;height:20px;fill:none;stroke:var(--signal);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+.doc-sub{display:block;font-family:var(--font-mono);font-size:11.5px;font-weight:500;color:var(--ink-dim);margin-top:2px;}
+.doc-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end;}
+.doc-btn{font-family:var(--font-mono);font-size:12.5px;font-weight:600;background:var(--signal);color:var(--navy-950);padding:8px 14px;border-radius:4px;text-decoration:none;white-space:nowrap;}
+.doc-btn:hover{background:var(--signal-dim);}
+.doc-btn.soon{background:transparent;color:var(--ink-dim);border:1px dashed var(--line);cursor:default;}
+.doc-alt{font-family:var(--font-mono);font-size:12px;color:var(--ink-dim);text-decoration:none;}
+.doc-alt:hover{color:var(--ink);}
+@media (max-width:640px){.doc-list li{flex-direction:column;align-items:flex-start;}}
+</style>
 </head>
 <body>
 
@@ -44,50 +62,71 @@
     </div>
     <div class="map-embed" style="border:1px solid var(--line);border-radius:6px;overflow:hidden;background:#fff;">
       <iframe src="Tableau_de_synthese_Isaac_Izekor.pdf#toolbar=0&navpanes=0" title="Tableau de synthèse E5" style="width:100%;height:760px;border:0;display:block;"></iframe>
-  
-</section>
-
-<section>
-  <div class="wrap">
-    <div class="kicker">RÉALISATIONS EN COURS DE FORMATION</div>
-    <h2>Mes TP et missions techniques</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>DHCP</h3>
-        <p>Le DHCP (Dynamic Host Configuration Protocol) attribue automatiquement une adresse IP aux appareils qui rejoignent le réseau. Mise en place d'un serveur DHCP, définition de plages d'adresses et vérification du bail des clients.</p>
-        <div class="tag-row"><span class="tag">Adressage IP</span><span class="tag">Administration réseau</span></div>
-      </div>
-      <div class="card">
-        <h3>VLAN</h3>
-        <p>Un VLAN segmente logiquement un réseau physique en plusieurs réseaux distincts, même si les appareils partagent le même commutateur. Objectif : isoler le trafic, améliorer la sécurité et faciliter la gestion par service.</p>
-        <div class="tag-row"><span class="tag">Segmentation</span><span class="tag">Sécurité réseau</span></div>
-      </div>
-      
     </div>
+    <p style="color:var(--ink-dim);font-size:13.5px;margin-top:12px;">Si l'aperçu ne s'affiche pas sur votre appareil, utilisez le bouton « Ouvrir / télécharger le PDF ».</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
+    <div class="kicker">RÉALISATIONS EN COURS DE FORMATION</div>
+    <h2>Mes projets et travaux pratiques</h2>
+    <ul class="doc-list">
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><img src="images/glpi.png" alt=""></span><span>Livrable GLPI — Active Directory, DHCP, OCS &amp; GLPI<span class="doc-sub">Gestion de parc · Windows Server, OCS Inventory, GLPI</span></span></span>
+        <span class="doc-actions"><a class="doc-alt" href="tp-glpi-ocs-ad.html">Fiche en ligne</a><a class="doc-btn" href="Livrable_GLPI_Nawfal_Isaac_v2.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><img src="images/chiffrement.png" alt=""></span><span>Chiffrer les données<span class="doc-sub">Sécurité · chiffrement des fichiers et supports</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/chiffrer-les-donnees.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb" style="background:#f2f2f2;"><img src="images/zimbra.png" alt="" class="contain"></span><span>Zimbra<span class="doc-sub">Messagerie · serveur de messagerie collaborative</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/zimbra.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb" style="background:#fff;"><img src="images/dhcp.png" alt="" class="contain"></span><span>DHCP Failover<span class="doc-sub">Haute disponibilité · basculement entre deux serveurs DHCP</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/dhcp-failover.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb" style="background:#1e4d7b;"><img src="images/pfsense.png" alt="" class="contain"></span><span>Installation pfSense<span class="doc-sub">Pare-feu · interfaces WAN/LAN et règles de filtrage</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/installation-pfsense.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb" style="background:#1a1a1a;"><img src="images/ocs.png" alt="" class="contain"></span><span>Procédure OCS<span class="doc-sub">Inventaire · installation d'OCS Inventory et déploiement des agents</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/procedure-ocs.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb" style="background:#fff;"><img src="images/haproxy.png" alt="" class="contain"></span><span>Livrable HAProxy — Redondance &amp; Load Balancing<span class="doc-sub">Haute disponibilité · HAProxy, Heartbeat, Apache2, Debian 12</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="Livrable_HAProxy_Nawfal_Isaac.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg></span><span>Gateway<span class="doc-sub">Réseau · passerelle, routage et NAT</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/gateway.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+<section>
+  <div class="wrap">
     <div class="kicker">RÉALISATIONS EN MILIEU PROFESSIONNEL</div>
     <h2>Chez Circle Consulting</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Gestion de parc &amp; MDM</h3>
-        <p>Déploiement, enrôlement et administration à distance des terminaux via solution MDM.</p>
-        <div class="tag-row"><span class="tag">MDM</span><span class="tag">Gestion de parc</span></div>
-      </div>
-      <div class="card">
-        <h3>Diagnostic &amp; réparation</h3>
-        <p>Diagnostic de pannes matérielles/logicielles et réparation de postes de travail, spécialisation MacBook.</p>
-        <div class="tag-row"><span class="tag">Hardware</span><span class="tag">macOS</span></div>
-      </div>
-      <div class="card">
-        <h3>Support &amp; SAV</h3>
-        <p>Prise en charge des demandes d'assistance, résolution d'incidents utilisateurs et suivi du parc.</p>
-        <div class="tag-row"><span class="tag">Support N1</span><span class="tag">SAV</span></div>
-      </div>
-    </div>
+    <ul class="doc-list">
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/><path d="M3 9a9 9 0 0 0 0 6M21 9a9 9 0 0 1 0 6"/></svg></span><span>Gestion de parc &amp; MDM<span class="doc-sub">Déploiement, enrôlement et administration à distance des terminaux</span></span></span>
+        <span class="doc-actions"><span class="doc-btn soon">Documentation à venir</span></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 0 5.4-5.4l-2.4 2.4-2.1-2.1 2.4-2.4z"/></svg></span><span>Diagnostic &amp; réparation<span class="doc-sub">Pannes matérielles et logicielles, spécialisation MacBook</span></span></span>
+        <span class="doc-actions"><span class="doc-btn soon">Documentation à venir</span></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="13" width="4" height="6" rx="1.5"/><rect x="17" y="13" width="4" height="6" rx="1.5"/><path d="M19 19v1a2 2 0 0 1-2 2h-4"/></svg></span><span>Support &amp; SAV<span class="doc-sub">Demandes d'assistance, incidents utilisateurs, suivi du parc</span></span></span>
+        <span class="doc-actions"><span class="doc-btn soon">Documentation à venir</span></span>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -95,18 +134,16 @@
   <div class="wrap">
     <div class="kicker">PROJETS PERSONNELS</div>
     <h2>En dehors des cours</h2>
-    <div class="card-grid">
-      <div class="card">
-        <h3>Application web club de football (SAE26)</h3>
-        <p>Application PHP/MySQL sous XAMPP pour un club fictif : authentification avec mots de passe hashés, gestion des rôles (admin/utilisateur) via sessions, connexions PDO, cinq pages de gestion.</p>
-        <div class="tag-row"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">PDO</span></div>
-      </div>
-      <div class="card">
-        <h3>Téléphonie d'entreprise avec Asterisk</h3>
-        <p>Mise en place d'un système de téléphonie sur IP sous Asterisk (Ubuntu Server) : softphones SIP, provisioning DHCP, analyse Wireshark, configuration d'un trunk SIP.</p>
-        <div class="tag-row"><span class="tag">Asterisk</span><span class="tag">VoIP</span><span class="tag">SIP</span></div>
-      </div>
-    </div>
+    <ul class="doc-list">
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></span><span>Application web club de football (SAE26)<span class="doc-sub">PHP / MySQL / PDO · authentification, rôles, pages de gestion</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/sae26-club-football.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+      <li>
+        <span class="doc-name"><span class="doc-thumb"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><span>Téléphonie d'entreprise avec Asterisk<span class="doc-sub">VoIP · softphones SIP, provisioning DHCP, trunk SIP</span></span></span>
+        <span class="doc-actions"><a class="doc-btn" href="docs/asterisk-telephonie.pdf" target="_blank" rel="noopener">Documentation (PDF)</a></span>
+      </li>
+    </ul>
   </div>
 </section>
 
